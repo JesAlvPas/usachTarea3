@@ -81,9 +81,10 @@
     .dropdown__btn {
         border: none;
     }
+
     .header__logo {
-    width: 110px;
-}
+        width: 110px;
+    }
 }
 
 /* #endregion */
@@ -132,9 +133,10 @@
 }
 
 @media(max-width:992px) {
-    .heading__title{
+    .heading__title {
         width: auto;
     }
+
     .heading__actions {
         display: none;
     }
@@ -193,8 +195,8 @@
 
 @media(max-width:992px) {
     .destination {
-       min-width: 200px;
-       flex-wrap: wrap;
+        min-width: 200px;
+        flex-wrap: wrap;
     }
 }
 
@@ -219,17 +221,20 @@
 }
 
 @media(max-width:992px) {
-    .carousel__card{
+    .carousel__card {
         padding: 0;
     }
-    .carousel-caption{
+
+    .carousel-caption {
         width: 70%;
         padding-left: 20%;
     }
-    .carousel__img{
+
+    .carousel__img {
         width: 70%;
     }
-    .carousel__text{
+
+    .carousel__text {
         width: 60%;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
     }
@@ -237,7 +242,7 @@
 
 /* #endregion Carousel*/
 
-/* #region footer*/
+/* #region footer con Grid  */
 .footer {
     display: flex;
     margin-top: 80px;
@@ -249,10 +254,10 @@
 }
 
 .footer__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 145px 50px repeat(3, 120px);
     width: 900px;
-    padding: 0 48px;
+    justify-content: space-around;
 }
 
 .footer__logo {
@@ -267,7 +272,6 @@
 }
 
 .footer__list {
-    display: flex;
     flex-direction: column;
 }
 
@@ -288,20 +292,20 @@
 }
 
 @media(max-width:992px) {
-    .footer{
+    .footer {
         height: auto;
+        padding: 30px 48px;
     }
-    .footer__container {
-        padding-top: 24px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 10%;
 
+    .footer__box--gridLogo {
+        grid-column: 1/-1;
     }
-    .footer__box{
-        width: 130px;
-        margin-bottom: 20px;
+
+    .footer__container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
     }
+
 }
 
-/* #endregion Carousel*/
+/* #endregion*/
